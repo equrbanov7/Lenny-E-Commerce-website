@@ -1,0 +1,103 @@
+@import "../../../../../../assets/styles/variables.scss";
+@import "../../../../../../assets/styles/mixin.scss";
+
+.RightShoppingCounter {
+  @include flexItems(null, center);
+  gap: 16px;
+
+  .forWishCard {
+    display: none;
+    h5 {
+      @include makeColorFix(secondary, paragraph10, RegularWeight);
+    }
+  }
+  .showingAllProcess {
+    @include flexItems(center, center);
+    gap: 16px;
+
+    .deleteItem {
+      @include flexItems(center, center);
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);;
+      cursor: pointer;
+      img {
+        margin: 8px;
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+      }
+    }
+  }
+  .counterItem {
+    border-radius: 8px;
+    border: 1px solid map-get($colors, GreyDark);
+    @include flexItems(null, center);
+    gap: 8px;
+    height: 42px;
+    button#myButton {
+      border: none;
+      font-size: map-get($fonts, paragraph20);
+    }
+
+    span {
+    
+      text-align: center;
+
+      @include makeColorFix(black, desktopSize16, MediumWeight);
+    }
+  }
+
+  .counterItem .btn:nth-child(1) {
+    color: map-get($colors, GreyDark);
+  }
+  .counterItem .btn:nth-child(3) {
+    color: map-get($colors, primarySecond2);
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .RightShoppingCounter {
+    .counterItem {
+      height: 34px;
+      span {
+        font-size: map-get($fonts, paragraph14);
+      }
+    }
+    .showingAllProcess {
+      .deleteItem {
+        img {
+          width: 20px;
+          height: 20px;
+          margin: 6px;
+        }
+      }
+    }
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .RightShoppingCounter {
+    justify-content: space-between;
+    width: 100%;
+    .counterItem{
+      height: 30px;
+      span {
+        font-size: map-get($fonts, paragraph12);
+      }
+    }
+    .showingAllProcess {
+      .deleteItem {
+        img {
+          width: 16px;
+          height: 16px;
+          margin: 6px;
+        }
+      }
+    }
+    .forWishCard {
+      display: flex;
+    }
+  }
+}

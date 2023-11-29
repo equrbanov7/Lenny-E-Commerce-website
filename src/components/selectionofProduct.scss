@@ -1,0 +1,28 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.selectOfProduct {
+  @include maekFlexForColum(8px);
+
+  h6 {
+   
+    font-family: Clash Grotesk;
+   
+
+    @include makeColorFix(black, paragraph16, RegularWeight);
+    line-height: 160%; /* 25.6px */
+  }
+  form .select {
+   
+    background: var(--d-grey-03, #f7f7f7);
+    font-family: Clash Grotesk;
+   
+
+     @include makeColorFix(black, paragraph14, MediumWeight);
+    line-height: 160%;
+    border-radius: 8px;
+    border: 1px solid var(--d-grey-01, #e4e9ee);
+    padding: 11px 16px;
+    width: 140px;
+  }
+}

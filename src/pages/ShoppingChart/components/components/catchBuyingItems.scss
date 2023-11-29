@@ -1,0 +1,77 @@
+@import "../../../../assets/styles/variables.scss";
+@import "../../../../assets/styles/mixin.scss";
+
+.CatchBuyingItems {
+  border-radius: 12px;
+  border: 1px solid map-get($colors, GreyDark);;
+  background: var(--white-general, #fff);
+  width: 60%;
+  padding: 32px 24px;
+ 
+  position: relative;
+  top: -32px;
+
+  .selectingItemsOfProducts {
+    @include maekFlexForColum(24px);
+    margin-top: 32px;
+  }
+  .catchAllThreeElements .rightInfoLogo .bottomInfosMerchant h5 {
+    padding: inherit;
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .CatchBuyingItems {
+
+    .selectingItemsOfProducts {
+      margin-top: 25px;
+    }
+    .nameOfcompany {
+      .catchAllThreeElements {
+        gap: 8px;
+        .leftImgLogo {
+          @include inheritDimensions();
+          width: 46px;
+          height: 46px;
+        }
+        .rightInfoLogo .rightInfosCatch h4 {
+          font-size: map-get($fonts,  paragraph14);
+        }
+        .rightInfoLogo .rightInfosCatch h3 {
+          font-size: map-get($fonts,  paragraph12);
+        }
+      }
+    }
+  }
+}
+//997px
+@media (max-width: 997px) {
+  .CatchBuyingItems{
+    width: 100%;
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .CatchBuyingItems {
+
+   
+    .nameOfcompany {
+      .catchAllThreeElements {
+        gap: 8px;
+        .leftImgLogo {
+          @include inheritDimensions();
+          width: 46px;
+          height: 46px;
+        }
+        .rightInfoLogo .rightInfosCatch h4 {
+          font-size: map-get($fonts,  paragraph14);
+        }
+        .rightInfoLogo .rightInfosCatch h3 {
+          font-size: map-get($fonts,  paragraph12);
+        }
+      }
+    }
+  }
+}

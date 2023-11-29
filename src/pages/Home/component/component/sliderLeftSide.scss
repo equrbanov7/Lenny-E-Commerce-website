@@ -1,0 +1,145 @@
+@import "../../../../assets/styles/mixin.scss";
+@import "../../../../assets/styles/variables.scss";
+
+.leftofSlide {
+  width: 50%;
+  padding-top: 90px;
+
+  padding-bottom: 90px;
+  transform: translateX(97px);
+  z-index: 3;
+}
+.leftofSlide div:nth-child(1) {
+  justify-content: center;
+
+  @include maekFlexForColum(16px);
+  margin-bottom: 32px;
+  h2 {
+    text-align: start;
+    padding-right: 8px;
+    //font-size: 58px;
+    font-size: map-get($fonts, desktopSize58);
+    width: 650px;
+  }
+  p {
+    text-align: start;
+
+    width: 100%;
+    max-width: 585px;
+    min-width: 315px;
+  }
+}
+
+.btnes {
+  @include flexItems(null, center);
+  gap: 1rem;
+  button {
+    max-width: 200px;
+    width: 100%;
+    transition: background 0.3s, color 0.3s;
+    
+  }
+  button:nth-child(1) {
+    background: map-get($colors, primary);
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+ 
+
+}
+._btnes_z8uh4_1 button:nth-child(1):hover{
+  background: map-get($colors, primaryFirst1);
+  color:#fff;
+}
+
+._btnes_z8uh4_1 button:nth-child(2):hover{
+  background: map-get($colors, primaryFirst1);
+  color: #fff;
+}
+
+
+@media (max-width: 1110px) {
+  // for slider first slider item
+
+  .leftofSlide div:nth-child(1) {
+    h2 {
+      font-size: map-get($fonts, desktopSize38);
+
+      width: 384px;
+    }
+    p {
+      max-width: 401px;
+      font-size: map-get($fonts, paragraph16);
+    }
+  }
+  .btnes {
+    button {
+      font-size: map-get($fonts, paragraph16);
+    }
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  // for slider first slider item
+  .leftofSlide {
+    transform: translateX(44px);
+    width: 40%;
+  }
+}
+
+//778px
+
+@media (max-width: 778px) {
+  .leftofSlide {
+    width: 100%;
+    transform: none;
+    padding-bottom: 3px;
+
+    flex-direction: column;
+
+    @include flexItems(center, center);
+  }
+  .leftofSlide div:nth-child(1) {
+    @include flexItems(center, center);
+
+    p {
+      max-width: inherit;
+      min-width: inherit;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .leftofSlide ._btnes_z8uh4_1 {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    button {
+      width: 100%;
+      max-width: inherit;
+    }
+  }
+}
+
+//576px
+@media (max-width: 576px) {
+  .leftofSlide div:nth-child(1) {
+    h2 {
+      font-size: map-get($fonts, desktopSize28);
+      padding-left: 24px;
+      padding-right: 24px;
+      min-width: inherit;
+      width: 100%;
+    }
+    p {
+      font-size: map-get($fonts, paragraph14);
+      width: 100%;
+    }
+  }
+  .btnes {
+    button {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+}

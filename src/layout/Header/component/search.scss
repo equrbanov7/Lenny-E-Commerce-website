@@ -1,0 +1,121 @@
+.middleSearch {
+  display: flex;
+  // width: 856px;
+  flex-grow: 0.7;
+  .searchResultCatch {
+    width: 100%;
+    position: relative;
+    .dataResult {
+      margin-top: 5px;
+      max-height: 200px;
+      position: absolute;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      gap: 8px;
+      z-index: 5;
+      padding: 8px;
+      display: none;
+      width: 100%;
+      .catchAllThreeElements {
+        width: 100%;
+        border: 1px solid #e4e9ee;
+        border-radius: 8px;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
+    .dataResult::-webkit-scrollbar {
+    
+      width: 12px;
+    }
+    .dataResult::-webkit-scrollbar-thumb {
+      background-color: #9BA6B9; 
+      border-radius: 8px; 
+    }
+    
+    .dataResult::-webkit-scrollbar-thumb:hover {
+      background-color: #BCC5D4; 
+    }
+    
+    .dataResult::-webkit-scrollbar-track {
+      background: #F6F6F6; 
+    }
+    
+    .dataResult::-webkit-scrollbar-track:hover {
+      background: #F9F9F9; 
+    }
+  }
+  .searchSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--d-grey-02, #f6f8fa);
+    width: 100%;
+    position: relative;
+    ._serachIcon_1gezz_15 {
+      z-index: 1;
+    }
+  }
+  .line {
+    width: 2px;
+    height: 24px;
+    background: #e4e9ee;
+  }
+  .searchING {
+    width: 100%;
+    input {
+      border-radius: 8px;
+      background: var(--d-grey-02, #f6f8fa);
+      border: none;
+      outline: none;
+      padding: 11px 16px;
+      width: 100%;
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .middleSearch {
+    flex-grow: 1;
+    width: 100%;
+    .searchSide {
+      form {
+        padding: inherit;
+
+        ._serachIcon_1gezz_15 {
+          transform: translate(-50%, 6px);
+        }
+      }
+      form ._select_1gezz_4 {
+        display: none;
+      }
+      .line {
+        display: none;
+      }
+    }
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .middleSearch .searchSide .searchResultCatch .dataResult {
+    padding: 4px;
+    .catchAllThreeElements {
+      .leftImgLogo {
+        max-width: 50px;
+        max-height: 50px;
+      }
+      .rightInfoLogo .rightInfosCatch h4 {
+        font-size: 14px;
+      }
+      .rightInfoLogo .bottomInfosMerchant h5 {
+        font-size: 12px;
+      }
+    }
+  }
+}

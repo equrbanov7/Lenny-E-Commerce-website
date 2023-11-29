@@ -1,0 +1,23 @@
+
+@import "../../../../assets/styles/mixin.scss";
+
+
+.forSpesficCatchAllReviewOve{
+    position: relative;
+    .ovarleyReview{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        z-index: 1; /* Ensure it's above other content */
+        @include flexItems(center, center);
+         opacity: 0;
+         display: none;
+    }
+    .changeOpacityReview{
+        opacity: 1;
+        display: inherit;
+    }
+}

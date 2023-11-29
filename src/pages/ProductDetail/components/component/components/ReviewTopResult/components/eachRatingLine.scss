@@ -1,0 +1,81 @@
+@import "../../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../../assets/styles/variables.scss";
+
+.EachRatingLine {
+ 
+  gap: 23px;
+ 
+
+  @include flexItems(null, center);
+
+  .leftStarRank {
+    @include flexItems(null, center);
+    gap: 4px;
+    span {
+      @include makeColorFix(black, paragraph16, MediumWeight);
+      line-height: 160%;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      transform: translateY(-2px);
+    }
+  }
+  .totalStarInfo {
+    span {
+     
+      @include makeColorFix(black, paragraph16, MediumWeight);
+      line-height: 160%;
+    }
+  }
+  .linearStar {
+    border-radius: 8px;
+    background: map-get($colors, GreyDark);
+  
+    width: 421px;
+    min-width: 221px;
+    height: 8px;
+    position: relative;
+    .showRank {
+      position: absolute;
+      width: 0%;
+      height: initial;
+      background: map-get($colors, primarySecond2);
+      height: inherit;
+      border-radius: inherit;
+    }
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  .EachRatingLine {
+    .leftStarRank span {
+         font-size: map-get($fonts, paragraph14);
+    }
+    .linearStar {
+      width: 250px;
+    }
+    .totalStarInfo span {
+         font-size: map-get($fonts, paragraph14);
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+.EachRatingLine{
+  width: 100%;
+  gap: 12px;
+  .leftStarRank span {
+      font-size: map-get($fonts, paragraph12);
+  }
+  .linearStar {
+    width: 100%;
+    min-width: inherit;
+  }
+  .totalStarInfo span {
+      font-size: map-get($fonts, paragraph12);
+  }
+}
+}

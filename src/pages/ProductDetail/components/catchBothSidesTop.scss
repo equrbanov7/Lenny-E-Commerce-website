@@ -1,0 +1,14 @@
+.CatchBothSidesTop{
+    display: flex;
+   
+    gap: 42px;
+    margin-bottom: 64px;
+}
+
+//1048px
+@media (max-width: 1048px) {
+    .CatchBothSidesTop{
+        flex-direction: column;
+    }
+  
+  }

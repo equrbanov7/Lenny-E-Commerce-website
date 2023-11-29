@@ -1,0 +1,65 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.FeaturedCtgAll {
+  margin-top: 80px;
+
+  @include maekFlexForColum(52px);
+
+  .swiper-slide {
+    background: inherit;
+  }
+  .swiper-scrollbar {
+    .swiper-scrollbar-drag {
+      height: 6px;
+      border-radius: 30px;
+      background: map-get($colors, primary);
+    }
+  }
+  .swiper-wrapper {
+    padding-bottom: 52px;
+  }
+}
+ 
+//1200px
+@media (max-width: 1200px) {
+  .FeaturedCtgAll {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+//1024px
+@media (max-width: 1024px) {
+  .FeaturedCtgAll {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .FeaturedCtgAll {
+    margin-left: 40px;
+    margin-right: 40px;
+    ._catchElm_1wdg5_12 {
+      padding: inherit;
+    }
+  }
+}
+//568px
+@media (max-width: 568px) {
+  .FeaturedCtgAll {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+//384px
+@media (max-width: 384px) {
+  .FeaturedCtgAll {
+    margin-left: 10px;
+    margin-right: 10px;
+    ._catchElm_1wdg5_12 {
+      padding: inherit;
+    }
+  }
+}

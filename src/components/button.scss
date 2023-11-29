@@ -1,0 +1,38 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.btn {
+  text-align: center;
+  font-family: "Clash Grotesk", sans-serif;
+
+  @include makeColorFix(primary, paragraph18, HardWeight);
+  line-height: 140%; /* 25.2px */
+  letter-spacing: -0.2px;
+  background: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid map-get($colors, primary);
+  cursor: pointer;
+}
+
+//1024px
+@media (max-width: 1024px) {
+  .btn {
+    font-size: map-get($fonts, paragraph16);
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .btn {
+    font-size: map-get($fonts, paragraph14);
+    padding: 6px 12px;
+  }
+}
+
+//384px
+@media (max-width: 384px) {
+  .btn {
+    font-size: map-get($fonts, paragraph12);
+  }
+}

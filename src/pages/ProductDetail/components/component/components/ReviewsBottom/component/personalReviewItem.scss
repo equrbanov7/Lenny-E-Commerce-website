@@ -1,0 +1,149 @@
+@import "../../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../../assets/styles/variables.scss";
+
+.PersonalReviewItem {
+  @include flexItems(space-between, flex-end);
+  width: 100%;
+
+  .leftPersonalReview {
+    .starsLike {
+      display: flex;
+      gap: 4px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    ._catchInfos_1j6zo_1 {
+      @include maekFlexForColum(4px);
+      margin-top: 16px;
+      margin-bottom: 24px;
+      h2 {
+        @include makeColorFix(black, paragraph16, HardWeight);
+        line-height: 140%;
+        letter-spacing: -0.2px;
+        text-align: inherit;
+      }
+      p {
+        @include makeColorFix(secondary, paragraph16, RegularWeight);
+        line-height: 160%;
+        text-align: inherit;
+      }
+    }
+    .catchAllThreeElements {
+      gap: 12px;
+      .leftImgLogo {
+        max-width: 32px;
+
+        width: 100%;
+        height: 100%;
+      }
+      .rightInfoLogo .rightInfosCatch h4 {
+        font-weight: 500;
+      }
+    }
+  }
+  .rightLikeDislikeBtns {
+    .btnes {
+      display: flex;
+      gap: 16px;
+      .ButtonImgUniverse {
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid map-get($colors, GreyDark);
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        button {
+          @include makeColorFix(black, paragraph16, RegularWeight);
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}
+
+//997px
+@media (max-width: 997px) {
+  .PersonalReviewItem {
+    .leftPersonalReview {
+      .starsLike {
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      ._catchInfos_1j6zo_1 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        h2 {
+          font-size: map-get($fonts, paragraph16);
+        }
+        p {
+          font-size: map-get($fonts, paragraph14);
+        }
+      }
+      .catchAllThreeElements {
+        .rightInfoLogo .rightInfosCatch h4 {
+          font-size: map-get($fonts, paragraph14);
+        }
+      }
+    }
+  }
+
+  .rightLikeDislikeBtns {
+    .btnes {
+      gap: 12px;
+    }
+    .ButtonImgUniverse button {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+}
+//554px
+@media (max-width: 554px) {
+  .PersonalReviewItem {
+    .leftPersonalReview {
+      .starsLike {
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      ._catchInfos_1j6zo_1 {
+        margin-top: 12px;
+
+        h2 {
+          font-size: map-get($fonts, paragraph14);
+          width: max-content;
+        }
+        p {
+          font-size: map-get($fonts, paragraph12);
+        }
+      }
+      .catchAllThreeElements {
+        gap: 8px;
+        .rightInfoLogo .rightInfosCatch h4 {
+          font-size: map-get($fonts, paragraph12);
+        }
+      }
+    }
+  }
+
+  .rightLikeDislikeBtns {
+    .btnes {
+      gap: 8px;
+      .ButtonImgUniverse {
+        padding: 10px !important;
+      }
+    }
+
+    .ButtonImgUniverse button {
+      font-size: map-get($fonts, paragraph12);
+    }
+  }
+}

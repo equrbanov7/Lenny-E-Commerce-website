@@ -1,0 +1,31 @@
+@import "../../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../../assets/styles/variables.scss";
+
+
+.EachBoxLine {
+  @include flexItems(null, center);
+  gap: 10px;
+
+  p {
+    color: var(--black-01, #0b0f0e);
+
+    /* Paragraph / P1 / 16 Medium - Lh 160% */
+    font-family: Clash Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+
+    @include makeColorFix(black, paragraph16, RegularWeight);
+
+    line-height: 160%; /* 25.6px */
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  .EachBoxLine {
+    p {
+      font-size: 14px;
+    }
+  }
+}

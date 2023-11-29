@@ -1,0 +1,27 @@
+.allBreadCrumbss{
+    .css-4pdmu4-MuiBreadcrumbs-ol{
+        gap: 8px;
+    }
+    margin-bottom: 40px !important;
+    margin-top: 60px !important;
+}
+.eachBreadCrumbs {
+  color: var(--dark-green-03, #1d9e34);
+
+  /* Paragraph / P1 / 16 Medium - Lh 160% */
+  font-family: Clash Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
+}
+.lastBreadCrumbs {
+  color: var(--black-01, #0b0f0e);
+
+  /* Paragraph / P1 / 16 Medium - Lh 160% */
+  font-family: Clash Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
+}

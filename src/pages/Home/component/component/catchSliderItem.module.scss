@@ -1,0 +1,16 @@
+@import "../../../../assets/styles/mixin.scss";
+.catchSides{
+    
+    @include flexItems(center);
+}
+
+@media (max-width: 778px) {
+
+   .catchSides{
+    
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   }
+
+}

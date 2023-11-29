@@ -1,0 +1,26 @@
+.catchInfos{
+    position: relative;
+}
+.titleDes{
+    color: var(--black-01, #0B0F0E);
+    text-align: center;
+    
+    /* Extra Heading/Eh2 - 38 Semi Bold -  Lh 140% */
+    font-family: Clash Grotesk;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 53.2px */
+    letter-spacing: -0.2px;
+}
+.description{
+    color: var(--grey-01, #818B9C);
+    text-align: center;
+    
+    /* Paragraph / P1 / 18 Regular - Lh 160% */
+    font-family: Clash Grotesk;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+}

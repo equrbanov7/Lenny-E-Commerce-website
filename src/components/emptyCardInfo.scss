@@ -1,0 +1,40 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.EmptyCardInfo{
+   
+
+    @include flexItems(space-between,center);
+    margin-block: 32px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid map-get($colors, GreyDark);
+    background: var(--white-general, #FFF);
+    padding: 32px 24px;
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4{
+        width: max-content;
+    }
+    .catchAllThreeElements .leftImgLogo{
+      
+        @include inheritDimensions();
+        width: 42px;
+        height: 42px;
+    }
+}
+
+// 554px
+@media (max-width: 554px) {
+    .EmptyCardInfo{
+        .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4{
+            width: auto;
+            font-size: map-get($fonts, paragraph14);
+
+        }
+        .catchAllThreeElements .leftImgLogo{
+            @include inheritDimensions();
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+}

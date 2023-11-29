@@ -1,0 +1,71 @@
+$colors: (
+    black: #0B0F0E,
+    blackLight: #1D2322,
+    blackMedium: #313736,
+
+    primary: #1E4C2F,
+    primaryFirst1: #257E34, 
+    primarySecond2: #1D9E34,
+
+    RedSoft: #E04124,
+    RedSoft1: #EF907F,
+    RedSoft2: #F9BCB1,
+
+    GreyLight: #F1F1F1,
+    GreyLight1: #F6F6F6,
+    GreyLight2: #F9F9F9,
+
+    OrangeSort: #FFA439,
+    OrangeSort1: #FFD5B8,
+    OrangeSort2: #FCECE1,
+    OrangeSort3: #FCECE1,
+
+    GreyDark: #E4E9EE,
+    GreyDark_1: #F0F3F6,
+    GreyDark_2: #F8F9FC,
+    GreyDark_3: #F6F8FA,
+    
+    secondary: #818B9C,
+    secondaryMedim: #9BA6B9,
+    secondaryDark: #BCC5D4,
+
+
+   
+   
+   
+   
+);
+$fonts: (
+    //! for Desktop
+    desktopSize58: 58px,
+    desktopSize38: 38px,
+    desktopSize32: 32px,
+    desktopSize28: 28px,
+    desktopSize24: 24px,
+    desktopSize20: 20px,
+    defualtSize: 16px,
+    //! for Ipad/Mobile
+    Ipad34: 34px,
+    Ipad18: 18px,
+    Ipad14: 14px,
+    Ipad12: 12px,
+    Ipad10: 10px,
+    //? FW-Header
+    HardWeight: 600,
+    MediumWeight: 500,
+    RegularWeight: 400,
+    //! Paragraphs
+
+    paragraph28: 28px,
+    paragraph26: 26px,
+    paragraph24: 24px,
+    paragraph22: 22px,
+    paragraph20: 20px,
+    paragraph18: 18px,
+    paragraph16: 16px,
+    paragraph14: 14px,
+    paragraph12: 12px,
+    paragraph10: 10px,
+    paragraph8: 8px,
+    
+)

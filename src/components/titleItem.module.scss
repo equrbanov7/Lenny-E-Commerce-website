@@ -1,0 +1,54 @@
+.titleitem {
+  display: flex;
+  justify-content: space-between;
+  // margin: auto 120px;
+  h1 {
+    color: var(--black-01, #0b0f0e);
+    font-family: Clash Grotesk;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.2px;
+  }
+}
+
+//1024px
+@media (max-width: 1024px) {
+  .titleitem {
+    h1 {
+      font-size: 28px;
+    }
+    .btn {
+      font-size: 16px;
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .titleitem {
+    h1 {
+      font-size: 18px;
+    }
+    .btn {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+}
+
+//384px
+@media (max-width: 384px) {
+ 
+  
+    .titleitem {
+      h1 {
+        font-size: 16px;
+      }
+      .btn {
+        font-size: 12px;
+      }
+    }
+  
+}

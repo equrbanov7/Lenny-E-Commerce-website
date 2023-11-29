@@ -1,0 +1,29 @@
+
+@mixin flexItems($justify: null, $align: null) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin makeColorFix ($color: null, $size: null, $weight: null) {
+    color: map-get($colors, $color);
+    font-size: map-get($fonts, $size);
+    font-weight: map-get($fonts, $weight);
+}
+@mixin maekFlexForColum($gap:null) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+} 
+@mixin makeFlexForRow ($gap:null) {
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+} 
+
+@mixin inheritDimensions {
+    max-width: inherit;
+    max-height: inherit;
+    min-width: inherit;
+    min-height: inherit;
+  }
+  

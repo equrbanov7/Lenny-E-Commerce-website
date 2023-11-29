@@ -1,0 +1,125 @@
+.cathcCard {
+  width: 100%;
+  max-width: 282px;
+  min-width: 155px;
+  margin:24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .topSide {
+    border-radius: 8px;
+    background: var(--l-grey-02, #f6f6f6);
+  }
+  .bottomSide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 16px;
+    gap: 8px;
+    height: 100%;
+  }
+}
+
+.cathcCard .topSide {
+  .imgCatch {
+    width: 180px;
+    height: 180px;
+    margin: 50px auto;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    object-fit: contain;
+    }
+  }
+}
+.cathcCard .bottomSide .leftProductInfos div:nth-child(1) {
+  h2 {
+    color: var(--black-01, #0b0f0e);
+    font-family: Clash Grotesk;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.2px;
+    text-align: inherit;
+    padding-bottom: 4px;
+  }
+  p {
+    color: var(--grey-01, #818b9c);
+    font-family: Clash Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: inherit;
+    padding-bottom: 8px;
+  }
+}
+
+.cathcCard .bottomSide .leftProductInfos {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+    .starSide {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span {
+        color: var(--black-01, #0b0f0e);
+        font-family: Clash Grotesk;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        transform: translateY(2px);
+      }
+    }
+    .soldCount {
+      color: var(--black-01, #0b0f0e);
+      font-family: Clash Grotesk;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      transform: translateY(2px);
+    }
+  }
+}
+
+.cathcCard .bottomSide .rightPrice {
+  h4 {
+    color: var(--dark-green-03, #1d9e34);
+    text-align: right;
+
+    /* Extra Heading/Eh6 - 20 Semi Bold -  Lh 130% */
+    font-family: Clash Grotesk;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.2px;
+  }
+}
+
+.cathcCard .wishIcon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    top: 20px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 100%;
+}
+.cathcCard .wishIcon:hover{
+  background-color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,112 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+
+.ShippingBottom {
+  @include maekFlexForColum(24px);
+
+  .titleOfCargo {
+    @include makeColorFix(black-01, desktopSize20, HardWeight);
+  }
+  .catchShippingAddres {
+   
+    @include flexItems(space-between,null);
+    border-radius: 12px;
+    border: 1px solid var(--d-grey-01, #e4e9ee);
+    background: var(--white-general, #fff);
+    padding: 24px;
+
+    .priceSide {
+    
+
+      @include flexItems(null, center);
+      gap: 24px;
+      .price {
+        @include makeColorFix(black-01, desktopSize20, HardWeight);
+      }
+      .iconDown {
+        width: 24px;
+        height: 24px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .catchAllThreeElements .leftImgLogo {
+    max-width: 100px;
+    min-width: inherit;
+    max-height: 52px;
+    min-height: inherit;
+  }
+  .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+    font-size: map-get($fonts,  paragraph20);
+  }
+  .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+    font-size: map-get($fonts,  paragraph16);
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .ShippingBottom {
+    .titleOfCargo {
+      font-size: map-get($fonts,  paragraph16);
+    }
+
+    .catchShippingAddres {
+      padding: 20px 16px;
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+       font-size: map-get($fonts,  paragraph14);
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+      font-size: map-get($fonts,  paragraph12);
+    }
+    .catchShippingAddres.priceSide {
+      .price {
+         font-size: map-get($fonts,  paragraph14);
+      }
+    }
+    .catchAllThreeElements .leftImgLogo {
+      max-width: 84px;
+
+      max-height: 44px;
+    }
+  }
+}
+//554px
+@media (max-width: 554px) {
+  .ShippingBottom {
+    .catchShippingAddres {
+      padding: 14px 12px;
+
+      .catchAllThreeElements {
+        gap: 12px;
+      }
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+       font-size: map-get($fonts,  paragraph12);
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+      font-size: map-get($fonts,  paragraph10);
+    }
+    .catchShippingAddres .priceSide {
+      gap: 8px;
+      .price {
+         font-size: map-get($fonts,  paragraph12);
+      }
+      .iconDown {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .catchAllThreeElements .leftImgLogo {
+      max-width: 63px;
+
+      max-height: 32px;
+    }
+  }
+}

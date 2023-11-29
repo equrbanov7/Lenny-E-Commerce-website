@@ -1,0 +1,50 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.formCHeckSelect {
+  border-radius: 12px;
+  border: 1px solid map-get($colors, GreyDark);
+
+  .hiddenBtn {
+    display: none;
+  }
+  .selectAll {
+    display: flex;
+    // gap: 12px;
+    padding: 9px 16px;
+    .priceSelects {
+      border: none;
+
+      font-family: Clash Grotesk;
+
+      @include makeColorFix(black, paragraph16, MediumWeight);
+      line-height: 160%;
+    }
+    .lineSelect {
+      width: 1px;
+      height: 24px;
+      /* margin-right: 6px; */
+      /* z-index: 6; */
+      background: map-get($colors, GreyDark);
+      color: #fff;
+      margin: auto 12px;
+    }
+    input {
+      border: none;
+      outline: none;
+     
+      font-family: Clash Grotesk;
+     
+
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      line-height: 160%;
+      padding: 4px 0px;
+      width: 100%;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

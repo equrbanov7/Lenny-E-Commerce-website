@@ -1,0 +1,263 @@
+@import "../../../assets/styles/mixin.scss";
+@import "../../../assets/styles/variables.scss";
+
+.searchHeadInfoAll {
+  @include flexItems(space-between, center);
+  margin-top: 32px;
+  margin-bottom: 52px;
+}
+
+.gridStatusChangeControl {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 100%;
+}
+
+.searchHeadInfoAll .leftInfos ._catchInfos_1j6zo_1 {
+  @include maekFlexForColum(4px);
+  h2 {
+    @include makeColorFix(black, paragraph24, HardWeight);
+    text-align: inherit;
+  }
+  p {
+    @include makeColorFix(secondary, paragraph16, RegularWeight);
+    text-align: inherit;
+  }
+}
+
+.searchHeadInfoAll .rightInfos {
+  @include flexItems(null, center);
+  gap: 24px;
+
+  .leftSelectionSide {
+    @include flexItems(null, center);
+    gap: 16px;
+    p {
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      line-height: 160%;
+    }
+    ._formCategory_1gezz_1 {
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);
+      ._serachIcon_1gezz_15 {
+        display: none;
+      }
+    }
+  }
+
+  .allRightElments {
+    @include flexItems(null, center);
+    gap: 24px;
+    .imgCatchFlt {
+      display: none;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);
+      z-index: 3;
+      img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .icon {
+      height: 44px;
+      width: 44px;
+    }
+  }
+
+  .lineBridge {
+    background: map-get($colors, GreyDark);
+    width: 2px;
+    height: 24px;
+  }
+  .rightSideMenu {
+    @include flexItems(null, center);
+    gap: 8px;
+    .firstIconBar {
+      border-radius: 8px;
+      background: map-get($colors, primary);
+      @include flexItems(center, center);
+      cursor: pointer;
+      img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .secondIconBar {
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);
+      img {
+        padding: 10px;
+        @include flexItems(center, center);
+      }
+    }
+  }
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .searchHeadInfoAll .leftInfos ._catchInfos_1j6zo_1 {
+    h2 {
+      font-size: map-get($fonts, paragraph20);
+    }
+    p {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+  .searchHeadInfoAll .rightInfos {
+    .leftSelectionSide {
+      gap: 14px;
+      p {
+        font-size: map-get($fonts, paragraph14);
+      }
+    }
+
+    .rightSideMenu {
+      gap: 6px;
+    }
+  }
+}
+
+//997px
+@media (max-width: 997px) {
+  .gridStatusChangeControl {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .searchHeadInfoAll {
+    @include maekFlexForColum(24px);
+    align-items: baseline;
+    position: relative;
+    width: 100%;
+  }
+  .searchHeadInfoAll .leftInfos ._catchInfos_1j6zo_1 {
+    h2 {
+      font-size: map-get($fonts, paragraph18);
+    }
+    p {
+      font-size: map-get($fonts, paragraph12);
+    }
+  }
+  .searchHeadInfoAll .rightInfos {
+    gap: 28px;
+    .leftSelectionSide {
+      gap: 8px;
+      p {
+        display: none;
+      }
+    }
+
+    .allRightElments {
+      gap: 12px;
+      .icon {
+        min-width: max-content;
+
+        min-height: max-content;
+      }
+    }
+    .allRightElments .imgCatchFlt {
+      @include flexItems(center, center);
+    }
+    .rightSideMenu {
+      gap: 6px;
+    }
+  }
+  .gridStatusChangeControl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+//662px
+@media (max-width: 662px) {
+  .gridStatusChangeControl {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .searchHeadInfoAll .rightInfos {
+    gap: 10px;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .leftSelectionSide {
+      gap: 8px;
+
+      ._formCategory_1gezz_1 {
+        padding-inline: 3px;
+        padding-block: 5px;
+        width: 100%;
+        height: 30px;
+        ._select_1gezz_4 {
+          width: 100%;
+          option {
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+
+    .allRightElments {
+      gap: 5px;
+    }
+
+    .rightSideMenu {
+      gap: 5px;
+      .firstIconBar {
+        img {
+          padding: 8px;
+          width: 90%;
+          height: 90%;
+        }
+      }
+      .secondIconBar {
+        img {
+          padding: 8px;
+          width: 90%;
+          height: 90%;
+        }
+      }
+    }
+  }
+  .searchHeadInfoAll .rightInfos .allRightElments .icon {
+    height: 30px;
+    width: auto;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      padding: 5px;
+    }
+  }
+}
+
+//374px
+@media (max-width: 345px) {
+  .searchHeadInfoAll .rightInfos {
+    flex-direction: column-reverse;
+    @include flexItems(center, center);
+    width: 100%;
+    gap: 14px;
+  }
+  .searchHeadInfoAll .rightInfos .leftSelectionSide ._formCategory_1gezz_1 {
+    padding: 15px;
+    height: auto;
+  }
+  .searchHeadInfoAll .rightInfos .rightSideMenu {
+    gap: 20px;
+  }
+  .searchHeadInfoAll .rightInfos .allRightElments {
+    gap: 20px;
+  }
+  .searchHeadInfoAll .rightInfos .lineBridge {
+    display: none;
+  }
+}

@@ -1,0 +1,103 @@
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  li img {
+    padding: 12px;
+  }
+  .basket img{
+    padding: 6px;
+  }
+  .person {
+    z-index: 9;
+    cursor: pointer;
+  }
+  .burgerMenuTop{
+    display: none !important;
+  }
+  .forDesignControl{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+  .notification{
+    margin-inline: 24px;
+  }
+  .personLogined{
+    width: 38px;
+    height: 38px;
+  }
+  .person img {
+    border-radius: 50px;
+    border: 1px solid var(--d-grey-01, #e4e9ee);
+    z-index: 9;
+  }
+  .line {
+    height: 24px;
+    width: 1px;
+    background: #e4e9ee;
+  }
+
+  .person img:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.forNonRegistratedItems{
+  gap: 16px;
+}
+.forNonRegBasket{
+  transform: translateY(-2px);
+}
+
+//778px
+@media (max-width: 778px) {
+  .icons {
+    .basket {
+      width: 24px;
+      height: 24px;
+      .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .person{
+      border-radius: 50%;
+    border: 1px solid var(--d-grey-01, #e4e9ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      margin: 7px;
+      border-radius: inherit;
+      border: none;
+      padding: 0;
+    }
+    }
+  }
+}
+
+//554px
+@media (max-width: 554px){
+  .icons{
+    .burgerMenuTop{
+      display: flex !important;
+      width: 24px;
+      height: 24px;
+    }
+    .desktopInfoTopMenu{
+      display: none !important;
+    }
+    .notification{
+      margin-inline: 12px;
+    }
+    
+  }
+ 
+}

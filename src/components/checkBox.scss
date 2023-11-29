@@ -1,0 +1,37 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.catchFormCheck {
+  form {
+    @include flexItems(null, center);
+
+    input {
+      margin-right: 8px;
+    }
+    label {
+      font-family: "Clash Grotesk", sans-serif;
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      line-height: 160%;
+      transform: translateY(1px);
+    }
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+  }
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .catchFormCheck {
+    form {
+      label {
+        font-size: map-get($fonts, paragraph14);
+      }
+      input {
+        margin-right: 6px;
+      }
+    }
+  }
+}

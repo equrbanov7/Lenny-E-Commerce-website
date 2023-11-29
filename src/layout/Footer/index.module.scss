@@ -1,0 +1,116 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixin.scss";
+footer {
+  margin-top: 90px;
+  width: 100%;
+  background-color: #f7f7f7;
+  position: relative;
+  @include maekFlexForColum();
+  //? footer top
+  .allFooter {
+    padding: 40px 24px;
+    @include maekFlexForColum(33px);
+    .catchLeftFooter {
+    
+      @include flexItems(center, start);
+      @include maekFlexForColum(16px);
+      p {
+        @include makeColorFix(black, paragraph14, RegularWeight);
+        line-height: 160%;
+      }
+    }
+    .catchFooterRight {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 28px;
+      row-gap: 40px;
+    }
+  }
+  //? Footer bottom
+  .catchFooterBottom {
+    padding: 16px 0;
+    width: 100%;
+    background-color: map-get($colors, GreyLight);
+    @include maekFlexForColum(12px);
+    align-items: center;
+    p {
+      @include makeColorFix(black, paragraph14, RegularWeight);
+    }
+    .catchRightSide {
+      @include makeFlexForRow(24px);
+    }
+  }
+}
+.catchFooterRight .informationOfFooter {
+  @include maekFlexForColum(16px);
+  h1 {
+    @include makeColorFix(black, defualtSize, HardWeight);
+  }
+  ul {
+    @include maekFlexForColum(12px);
+    li {
+      cursor: pointer;
+      @include makeColorFix(black, paragraph14, RegularWeight);
+    }
+    .lineBreak {
+      width: 100%;
+      height: 1px;
+      background-color: map-get($colors, GreyDark);
+    }
+  }
+}
+.iconOfHead {
+  position: relative;
+  width: 127px;
+  height: auto;
+}
+
+footer {
+  .footer_right_bottom{
+    display: flex;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    width: 100%;
+    @include flexItems(space-between);
+    .allFooter {
+      padding: 60px 120px;
+      @include flexItems(space-between, start);
+      @include makeFlexForRow();
+      .catchLeftFooter p {
+        @include makeColorFix(black, paragraph16, RegularWeight);
+      }
+      .catchFooterRight {
+        width: 100%;
+        @include makeFlexForRow(32px);
+        justify-content: space-between;
+        h1 {
+          @include makeColorFix(black, desktopSize20, HardWeight);
+          white-space: nowrap;
+        }
+        .informationOfFooter:nth-child(4) {
+          width: 274px;
+        }
+      }
+    }
+    .catchFooterBottom {
+      padding: 16px 120px;
+      @include makeFlexForRow();
+      @include flexItems(space-between);
+      p {
+        @include makeColorFix(black, paragraph16, RegularWeight);
+      }
+    }
+  }
+
+  footer {
+    .footer_right_bottom{
+      display: flex;
+      gap: 32px;
+    }
+  }
+}
+

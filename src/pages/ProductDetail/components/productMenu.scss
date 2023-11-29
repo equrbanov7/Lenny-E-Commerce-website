@@ -1,0 +1,56 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.catchMenuAllItems {
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    padding: 14px 24px;
+    text-transform: inherit;
+  }
+  .css-19kzrtu {
+    padding: 0;
+    padding-top: 32px;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: map-get($colors, primary);
+    text-align: center;
+
+    @include makeColorFix(black, paragraph18, MediumWeight);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.2px;
+    text-transform: inherit;
+  }
+  .css-1aquho2-MuiTabs-indicator {
+    background-color: map-get($colors, primary);
+  }
+}
+
+.menuNameProduct {
+  text-align: center;
+  @include makeColorFix(secondary, paragraph18, MediumWeight);
+  line-height: 160%; /* 28.8px */
+  text-transform: inherit;
+}
+
+//994px
+@media (max-width: 994px) {
+  .catchMenuAllItems {
+    .menuNameProduct {
+      font-size: map-get($fonts, paragraph16);
+    }
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+      font-size: map-get($fonts, paragraph16);
+    }
+  }
+}
+//574px
+@media (max-width: 574px) {
+  .catchMenuAllItems {
+    .menuNameProduct {
+      font-size: map-get($fonts, paragraph14);
+      width: 45px;
+    }
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.UserModal {
+  border-radius: 8px;
+  border: 1px solid var(--d-grey-01, #e4e9ee);
+  background: var(--white-general, #fff);
+
+  /* ds */
+  box-shadow: 0px 4px 70px 0px rgba(129, 139, 156, 0.2);
+
+  padding: 25px 24px;
+
+  width: 410px;
+//   height: 498px;
+ display: none;
+
+
+  .innerUserModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+
+    .lineForbridge {
+      background: #e4e9ee;
+      width: 100%;
+      height: 1px;
+    }
+    .titleOfBP {
+      color: var(--grey-01, #818b9c);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Clash Grotesk;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+    }
+  }
+}
+
+.UserModal .innerUserModal {
+  .forAllItems {
+    .catchAllThreeElements {
+      gap: 12px;
+
+      .rightInfoLogo .rightInfosCatch h3 {
+        display: none;
+      }
+      .leftImgLogo {
+        max-width: inherit;
+        max-height: inherit;
+        min-width: inherit;
+        min-height: inherit;
+        height: 24px;
+        width: 24px;
+      }
+      .rightInfoLogo .rightInfosCatch h4 {
+        color: var(--grey-01, #818b9c);
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Clash Grotesk;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+      }
+    }
+  }
+  .forUserInformation {
+    .catchAllThreeElements {
+      .leftImgLogo {
+        max-width: inherit;
+        max-height: inherit;
+        min-width: inherit;
+        min-height: inherit;
+        height: 58px;
+        width: 58px;
+        transform: translateY(-5px);
+      }
+      .rightInfoLogo .rightInfosCatch h4 {
+        font-size: 20px;
+      }
+      .rightInfoLogo .rightInfosCatch h3 {
+        font-size: 16px;
+      }
+    }
+  }
+  .WalletInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    .catchAllBalanceInformation {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .balanceSide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .rightResult {
+        p {
+          color: var(--black-01, #0b0f0e);
+          text-align: right;
+          font-feature-settings: "clig" off, "liga" off;
+          font-family: Clash Grotesk;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 25.6px */
+        }
+      }
+    }
+  }
+
+  .menuPersonInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    .catchAllMenuItems {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  .SignOutUser {
+    cursor: pointer;
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+      color: var(--red-1, #e04124);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Clash Grotesk;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 25.6px */
+    }
+  }
+}
+.forUserShowScreen{
+  display: none;
+}
+
+.showUserPersonModal{
+    position: absolute;
+    right: 10%;
+    display: inherit;
+    transform: translate(8%, 8%);
+    z-index: 3;
+
+}
+//554px
+@media (max-width: 554px) {
+  .UserModal{
+    width: 327px;
+    height: auto;
+
+    .innerUserModal{
+      gap: 18px;
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+@import "../../../assets/styles/mixin.scss";
+
+.mergeBoth {
+  gap: 40px;
+
+  @include flexItems(null, flex-start);
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .mergeBoth {
+    gap: 20px;
+  }
+}
+//997px
+@media (max-width: 997px) {
+  .mergeBoth {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../assets/styles/variables.scss";
+
+.SystemRequiredAll{
+
+    .titleOfRequired{
+       
+        @include makeColorFix(black, paragraph18, HardWeight);
+        line-height: 140%; /* 25.2px */
+        letter-spacing: -0.2px;
+    }
+    .catchEachSysRequireds{
+        margin-top: 16px;
+    }
+}
+//994px
+@media (max-width: 994px) {
+    .SystemRequiredAll{
+        .titleOfRequired{
+            font-size: map-get($fonts, paragraph16);
+        }
+    }
+}

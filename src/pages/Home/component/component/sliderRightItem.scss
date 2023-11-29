@@ -1,0 +1,242 @@
+@import "../../../../assets/styles/mixin.scss";
+@import "../../../../assets/styles/variables.scss";
+
+.sliderrightCatch {
+  width: 50%;
+  position: relative;
+
+  .sliderBackImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sliderrightCatch .newCarditemContainer {
+  position: absolute;
+  top: 34%;
+  right: 49%;
+
+  transform: translate(8%, -38%);
+}
+.sliderrightCatch .cathcCardComp {
+  margin: inherit;
+  width: 150px;
+  height: 144px;
+
+  border-radius: 8px 8px 0px 0px;
+  background: map-get($colors, GreyLight1);
+  .topSide {
+    border-radius: 8px 8px 0px 0px;
+    background: map-get($colors, GreyLight1);
+    .imgCatch {
+      width: 120px;
+      height: 120px;
+      margin: 12px 15px;
+    }
+  }
+  .bottomSide {
+    padding: 10px;
+    text-align: start;
+    background: #fff;
+    .leftProductInfos ._catchInfos_1j6zo_1 {
+      h2 {
+        font-family: Clash Grotesk;
+
+        font-style: normal;
+
+        line-height: 140%;
+        letter-spacing: -0.2px;
+
+        @include makeColorFix(black, paragraph14, HardWeight);
+      }
+      p {
+        font-family: Clash Grotesk;
+
+        font-style: normal;
+
+        line-height: 160%;
+
+        @include makeColorFix(secondary, paragraph10, RegularWeight);
+      }
+    }
+    .leftProductInfos .rating {
+      .starSide {
+        img {
+          width: 12px;
+        }
+        span {
+          font-family: Clash Grotesk;
+
+          font-style: normal;
+
+          line-height: 160%;
+
+          @include makeColorFix(black, paragraph10, MediumWeight);
+        }
+      }
+      .soldCount {
+        font-family: Clash Grotesk;
+
+        font-style: normal;
+
+        line-height: 160%;
+
+        @include makeColorFix(black, paragraph10, MediumWeight);
+      }
+    }
+    .rightPrice {
+      display: none;
+    }
+  }
+  .wishIcon {
+    right: 9px;
+    top: 9px;
+    padding: 5px;
+  }
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .sliderrightCatch {
+    .newCarditemContainer {
+      top: 41%;
+    }
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  // for slider first slider item
+  .sliderrightCatch {
+    width: 60%;
+  }
+}
+//778px
+@media (max-width: 778px) {
+  // for slider first slider item
+  .sliderrightCatch {
+    width: 100%;
+  }
+  .sliderrightCatch .cathcCardComp {
+    margin: inherit;
+
+    .wishIcon {
+      img {
+        width: map-get($fonts, desktopSize12);
+        height: map-get($fonts, desktopSize12);
+      }
+    }
+  }
+}
+
+//576px
+
+@media (max-width: 576px) {
+  .sliderrightCatch .cathcCardComp {
+    margin: inherit;
+    width: 128px;
+    height: inherit;
+    min-width: inherit;
+
+    .topSide {
+      width: 100%;
+
+      @include flexItems(center);
+      .imgCatch {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .bottomSide {
+      padding: 8px;
+
+      .leftProductInfos ._catchInfos_1j6zo_1 {
+        h2 {
+          font-size: map-get($fonts, paragraph12);
+          padding-bottom: 2px;
+        }
+        p {
+          font-size: 9px;
+          padding-bottom: 4px;
+        }
+      }
+      .leftProductInfos .rating {
+        gap: 8px;
+        .starSide {
+          img {
+            width: 15px;
+            height: 15px;
+          }
+          span {
+            font-size: 9px;
+          }
+        }
+        .soldCount {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .sliderrightCatch {
+    .newCarditemContainer {
+      top: 50%;
+      .lineSign {
+        .tppCircle {
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+//445px
+
+@media (max-width: 445px) {
+  .sliderrightCatch .cathcCardComp {
+    width: 110px;
+
+    .topSide {
+      .imgCatch {
+        width: 100%;
+        height: 80px;
+      }
+    }
+    .bottomSide {
+      padding: 5px;
+
+      .leftProductInfos ._catchInfos_1j6zo_1 {
+        h2 {
+          font-size: map-get($fonts, paragraph12);
+          padding-bottom: 2px;
+        }
+        p {
+          font-size: 9px;
+          padding-bottom: 4px;
+        }
+      }
+      .leftProductInfos .rating {
+        gap: 8px;
+        .starSide {
+          img {
+            width: 15px;
+            height: 15px;
+          }
+          span {
+            font-size: 9px;
+          }
+        }
+        .soldCount {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  .sliderrightCatch {
+    .newCarditemContainer {
+      top: 42%;
+    }
+  }
+}

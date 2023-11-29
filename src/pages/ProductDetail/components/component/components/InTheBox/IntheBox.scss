@@ -1,0 +1,30 @@
+@import "../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../assets/styles/variables.scss";
+
+.InTheBoxItems {
+ 
+  justify-content: center;
+
+  margin-top: 16px;
+
+  @include maekFlexForColum(12px);
+ 
+}
+.catchAllIntheBox{
+  .titleOfInthebox {
+    @include makeColorFix(black, paragraph18, HardWeight);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.2px;
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  .catchAllIntheBox{
+    .titleOfInthebox {
+    
+      font-size: 15px;
+   
+    }
+  }
+}

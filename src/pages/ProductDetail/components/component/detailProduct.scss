@@ -1,0 +1,45 @@
+@import "../../../../assets/styles/variables.scss";
+@import "../../../../assets/styles/mixin.scss";
+
+section.detailProductCatch {
+  ._catchInfos_1j6zo_1 {
+    width: 75%;
+    @include maekFlexForColum(12px);
+    h2 {
+      @include makeColorFix(black, desktopSize28, HardWeight);
+      letter-spacing: -0.2px;
+      text-align: inherit;
+    }
+    p {
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      line-height: 160%; /* 25.6px */
+      text-align: inherit;
+    }
+  }
+}
+//994px
+@media (max-width: 994px) {
+  section.detailProductCatch {
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts, paragraph20);
+      }
+      p {
+        font-size: map-get($fonts, paragraph14);
+      }
+    }
+  }
+}
+//574px
+@media (max-width: 574px) {
+  section.detailProductCatch {
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts, paragraph18);
+      }
+      p {
+        font-size: map-get($fonts, paragraph12);
+      }
+    }
+  }
+}

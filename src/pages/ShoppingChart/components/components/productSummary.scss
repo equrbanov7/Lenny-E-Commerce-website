@@ -1,0 +1,166 @@
+@import "../../../../assets/styles/variables.scss";
+@import "../../../../assets/styles/mixin.scss";
+
+
+.ProductSummary {
+  border-radius: 12px;
+  border: 1px solid map-get($colors, GreyDark);
+  background: var(--white-general, #fff);
+  padding: 24px;
+  @include maekFlexForColum();
+  position: relative;
+  top: -32px;
+  width: 30%;
+
+  .lineBreakBox {
+    background: map-get($colors, GreyDark);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+
+  .titleOfCheckBox {
+    @include makeColorFix(black, desktopSize20, HardWeight);
+    margin-bottom: 24px;
+  }
+  ._catchInfos_1j6zo_1 {
+   
+
+    @include flexItems(space-between, center);
+  }
+  ._catchInfos_1j6zo_1 h2,
+  p {
+    text-align: inherit;
+  }
+  .selectedProductsInBox ._catchInfos_1j6zo_1 h2,
+  p {
+    @include makeColorFix(black, paragraph16, RegularWeight);
+  }
+  .selectedProductsInBox ._catchInfos_1j6zo_1 p {
+    @include makeColorFix(black, paragraph16, RegularWeight);
+  }
+
+  .calculatedItems ._catchInfos_1j6zo_1 h2 {
+    @include makeColorFix(secondary, paragraph16, RegularWeight);
+  }
+  .calculatedItems ._catchInfos_1j6zo_1 p {
+    @include makeColorFix(black, paragraph16, RegularWeight);
+  }
+  .totalPriceItems ._catchInfos_1j6zo_1 h2,
+  p {
+   
+    text-align: right;
+
+    @include makeColorFix(black, paragraph20, HardWeight);
+  }
+
+  .selectedProductsInBox,
+  .calculatedItems {
+    @include maekFlexForColum(16px);
+  }
+
+  .usingPromocode {
+   
+
+    @include flexItems(space-between, center);
+
+    border-radius: 12px;
+    border: 1px solid map-get($colors, GreyDark);
+    background: var(--white-general, #fff);
+    padding: 19px 16px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    .catchAllThreeElements .leftImgLogo {
+      width: 24px;
+      height: 24px;
+      @include inheritDimensions();
+    }
+
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+      font-size: map-get($fonts,  paragraph16);
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch {
+      gap: 2px;
+    }
+  }
+
+  .checkoutCLick {
+    border-radius: 8px;
+    background: map-get($colors, primary);
+    .btn {
+      width: 100%;
+      color: var(--white-general, #fff);
+      text-align: center;
+      font-size: map-get($fonts,  paragraph16);
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .ProductSummary {
+    .titleOfCheckBox {
+      font-size: map-get($fonts,  paragraph16);
+    }
+
+    .selectedProductsInBox ._catchInfos_1j6zo_1 h2,
+    p {
+        font-size: map-get($fonts,  paragraph14);
+    }
+
+    .calculatedItems ._catchInfos_1j6zo_1 h2 {
+        font-size: map-get($fonts,  paragraph14);
+    }
+    .calculatedItems ._catchInfos_1j6zo_1 p {
+      font-size: map-get($fonts,  paragraph14);
+    }
+    .totalPriceItems ._catchInfos_1j6zo_1 h2,
+    p {
+      font-size: map-get($fonts,  paragraph16);
+    }
+
+    .usingPromocode {
+      .catchAllThreeElements {
+        gap: 12px;
+      }
+      .catchAllThreeElements .leftImgLogo {
+        width: 20px;
+        height: 20px;
+      }
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+        font-size: map-get($fonts,  paragraph14);
+      }
+
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+        font-size: map-get($fonts,  paragraph12);
+      }
+    }
+
+    .checkoutCLick .btn {
+      font-size: map-get($fonts,  paragraph16);
+    }
+  }
+}
+
+//997px
+@media (max-width: 997px) {
+  .ProductSummary {
+    width: 100%;
+  }
+}
+
+//1048px
+@media (max-width: 554px) {
+  .ProductSummary {
+    .usingPromocode {
+      .catchAllThreeElements {
+        gap: 12px;
+      }
+    }
+
+    .checkoutCLick .btn {
+      font-size: map-get($fonts,  paragraph14);
+    }
+  }
+}

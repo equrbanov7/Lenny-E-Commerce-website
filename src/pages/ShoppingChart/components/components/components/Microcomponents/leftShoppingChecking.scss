@@ -1,0 +1,84 @@
+@import "../../../../../../assets/styles/variables.scss";
+@import "../../../../../../assets/styles/mixin.scss";
+
+.LeftShoppingChecking {
+  @include flexItems(null, center);
+  gap: 24px;
+
+  .catchAllThreeElements {
+    cursor: pointer;
+  }
+  .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+    font-size: map-get($fonts, paragraph20);
+  }
+  .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+    font-size: map-get($fonts, paragraph16);
+  }
+  .catchAllThreeElements .rightInfoLogo .bottomInfosMerchant h5 {
+    @include makeColorFix(primarySecond2, desktopSize20, MediumWeight);
+    background-color: inherit;
+  }
+
+  .catchAllThreeElements .leftImgLogo {
+    border-radius: 8px;
+    background: var(--l-grey-02, #f6f6f6);
+    @include flexItems(center, center);
+    @include inheritDimensions();
+    width: auto;
+    img {
+      width: 84px;
+      height: 84px;
+      margin: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .LeftShoppingChecking {
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+      font-size: map-get($fonts, paragraph14);
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+      font-size: map-get($fonts, paragraph14);
+    }
+    .catchAllThreeElements .rightInfoLogo .bottomInfosMerchant h5 {
+      font-size: map-get($fonts, paragraph16);
+    }
+    .catchAllThreeElements .leftImgLogo {
+      img {
+        width: 64px;
+        height: 64px;
+        margin: 10px;
+      }
+    }
+  }
+}
+//554px
+@media (max-width: 554px) {
+  .LeftShoppingChecking {
+    gap: 16px;
+    width: 100%;
+
+    .catchAllThreeElements {
+      gap: 12px;
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+      font-size: map-get($fonts, paragraph12);
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+      font-size: map-get($fonts, paragraph10);
+    }
+    .catchAllThreeElements .rightInfoLogo .bottomInfosMerchant h5 {
+      font-size: map-get($fonts, paragraph12);
+    }
+    .catchAllThreeElements .leftImgLogo {
+      img {
+        width: 38px;
+        height: 38px;
+        margin: 9px;
+      }
+    }
+  }
+}

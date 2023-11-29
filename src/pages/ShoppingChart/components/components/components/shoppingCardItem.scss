@@ -1,0 +1,19 @@
+@import "../../../../../assets/styles/variables.scss";
+@import "../../../../../assets/styles/mixin.scss";
+
+.ShoppingCardItem {
+  @include flexItems(space-between, center);
+}
+.lineBreakItems {
+  background: map-get($colors, GreyDark);
+  width: 100%;
+  height: 1px;
+}
+
+//554px
+@media (max-width: 554px) {
+  .ShoppingCardItem {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

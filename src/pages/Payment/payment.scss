@@ -1,0 +1,48 @@
+.PaymentAll {
+  .lineBreakmethod {
+    width: 100%;
+    background: #e4e9ee;
+    height: 1px;
+  }
+  .ProductSummary {
+    width: 40%;
+  }
+
+  .allpaymentItemsMethodsCatch {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    justify-content: center;
+
+    .catchLeftallPaymentMethods {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--d-grey-01, #e4e9ee);
+      background: var(--white-general, #fff);
+      width: 60%;
+      padding: 32px 24px;
+      // margin-left: 120px;
+      position: relative;
+      top: -32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .paymentmethodsItems {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  }
+
+  .catchLeftallPaymentMethods .titleOfMethood {
+    color: var(--black-01, #0b0f0e);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Clash Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.2px;
+  }
+}

@@ -1,0 +1,27 @@
+.formCategory {
+    padding: 1rem;
+    .select {
+      color: var(--black-01, #0b0f0e);
+      font-family: Clash Grotesk;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      outline: none;
+      border: none;
+      background-color: initial;
+    }
+    .serachIcon {
+      position: absolute;
+      right: 3px;
+      top: 0;
+      transform: translate(-50%, 10px);
+    }
+  }
+
+  //1200px
+@media (max-width: 1200px) {
+  .select{
+    font-size: 14px;
+  }
+}

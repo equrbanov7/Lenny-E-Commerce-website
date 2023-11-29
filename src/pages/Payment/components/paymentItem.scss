@@ -1,0 +1,19 @@
+.PaymentItem{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .catchAllThreeElements .leftImgLogo{
+        border-radius: 8px;
+        background: var(--l-grey-02, #F6F6F6);
+        width: 100px;
+        height: 66px;
+        max-width: inherit;
+        min-width: inherit;
+        max-height: inherit;
+        min-height: inherit;
+    }
+    .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+        font-size: 14px;
+    }
+}

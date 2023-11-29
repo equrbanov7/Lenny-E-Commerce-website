@@ -1,0 +1,32 @@
+
+@media (max-width: 1200px) {
+    .forSpesficClass{
+ 
+        .my-Margin-container{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+}
+
+//662px
+@media (max-width: 662px) {
+    .forSpesficClass{
+ 
+        .my-Margin-container{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
+//384px
+@media (max-width: 384px) {
+    .forSpesficClass{
+ 
+        .my-Margin-container{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

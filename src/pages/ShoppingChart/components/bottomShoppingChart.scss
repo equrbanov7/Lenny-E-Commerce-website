@@ -1,0 +1,20 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.BottomShoppingChart {
+  gap: 32px;
+
+  @include flexItems(center, flex-start);
+}
+
+//997px
+@media (max-width: 997px) {
+  .BottomShoppingChart {
+    flex-direction: column;
+
+    width: 100%;
+    padding-inline: 24px;
+
+    @include flexItems(center, center);
+  }
+}

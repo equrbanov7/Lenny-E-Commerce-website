@@ -1,0 +1,124 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.imageGalleryProduct {
+  // width: 50%;
+  .image-gallery-left-nav .image-gallery-svg,
+  .image-gallery-right-nav .image-gallery-svg {
+    border-radius: 40px;
+    background: rgba(11, 15, 14, 0.16);
+    width: 24px;
+    height: 24px;
+    color: map-get($colors, black);
+  }
+  .image-gallery-slide.image-gallery-center {
+    border-radius: 9px;
+    background: map-get($colors, GreyLight1);
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: 300px;
+    width: 300px;
+    margin: 65px 140px;
+  }
+
+
+  .image-gallery-thumbnails .image-gallery-thumbnails-container {
+    @include flexItems(center, null);
+    gap: 16px;
+  }
+  .image-gallery-thumbnail {
+    border-radius: 9px;
+    width: 100%;
+    background: map-get($colors, GreyLight1);
+  }
+  button.image-gallery-thumbnail.active {
+    border: 1.5px solid var(--dark-green-01, #1e4c2f);
+  }
+  img.image-gallery-thumbnail-image {
+    width: 86px;
+    height: 86px;
+  }
+  span.image-gallery-thumbnail-inner {
+    margin: 20px;
+  }
+}
+
+
+//1200px
+@media (max-width: 1200px) {
+  .imageGalleryProduct{
+
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      gap: 6px;
+    }
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      span.image-gallery-thumbnail-inner {
+        margin: 10px;
+      }
+    }
+
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+     
+      margin: 60px 130px;
+    }
+
+  }
+
+}
+//1048px
+@media (max-width: 1048px) {
+  .imageGalleryProduct{
+
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      gap: 8px;
+    }
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      span.image-gallery-thumbnail-inner {
+        margin: 20px;
+      }
+    }
+    .image-gallery-icon {
+      display: none;
+    }
+
+  }
+
+}
+//662px
+@media (max-width: 662px) {
+  .imageGalleryProduct{
+
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      gap: 4px;
+    }
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+      height: 200px;
+      width: 200px;
+      margin: 65px 40px;
+    }
+    img.image-gallery-thumbnail-image {
+      width: 50px;
+      height: 50px;
+    }
+    span.image-gallery-thumbnail-inner {
+      margin: 12px;
+    }
+
+  }
+
+}
+
+//440px
+@media (max-width: 440px) {
+  .imageGalleryProduct{
+    .image-gallery-thumbnail {
+      width: auto;
+    }
+
+    .image-gallery-thumbnails .image-gallery-thumbnails-container {
+      span.image-gallery-thumbnail-inner {
+        margin: 10px;
+      }
+    }
+  }
+}

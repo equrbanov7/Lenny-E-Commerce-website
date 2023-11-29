@@ -1,0 +1,99 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.allTopShoppingChart {
+  background: var(--d-grey-03, #f7f7f7);
+  width: 100%;
+ 
+
+  @include flexItems(center,null);
+}
+
+.TopShoppingChart {
+
+  @include flexItems(space-between, center);
+  padding: 60px 120px;
+  max-width: 1600px;
+  width: 100%;
+
+  ._catchInfos_1j6zo_1 {
+    h2 {
+       @include makeColorFix(black, desktopSize24, HardWeight);
+      text-align: inherit;
+    }
+    p {
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      text-align: inherit;
+    }
+  }
+  .selectOfProduct {
+   
+    align-items: center;
+   
+
+    @include makeFlexForRow(16px);
+    h6 {
+      // color: var(--grey-01, #818b9c);
+      color: map-get($colors, secondary);
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .allTopShoppingChart {
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts, paragraph20);
+      }
+      p {
+         font-size: map-get($fonts, paragraph14);
+      }
+    }
+    .selectOfProduct {
+      gap: 10px;
+      h6 {
+         font-size: map-get($fonts, paragraph14);
+      }
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .allTopShoppingChart .TopShoppingChart {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 24px 32px;
+
+    .forResponsiveSelectItems {
+      width: 100%;
+      .selectOfProduct {
+        width: 100%;
+        form {
+          width: 100%;
+          select {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+//554px
+@media (max-width: 554px) {
+  .allTopShoppingChart {
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts, paragraph18);
+      }
+      p {
+         font-size: map-get($fonts, paragraph12);
+      }
+    }
+   
+  }
+}

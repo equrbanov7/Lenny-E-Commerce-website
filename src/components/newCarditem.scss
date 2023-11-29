@@ -1,0 +1,282 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.cathcCardComp {
+  width: 282px;
+  margin-bottom: 32px;
+  min-width: 155px;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  .topSide {
+    border-radius: 8px;
+    background: var(--l-grey-02, #f6f6f6);
+  }
+  .bottomSide {
+    @include flexItems(space-between, flex-start);
+    padding-top: 16px;
+    gap: 8px;
+    height: 100%;
+  }
+}
+
+.cathcCardComp .topSide {
+  .imgCatch {
+    width: 180px;
+    height: 180px;
+    margin: 50px auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.cathcCardComp .bottomSide .leftProductInfos div:nth-child(1) {
+  h2 {
+    font-family: Clash Grotesk;
+
+    @include makeColorFix(black, paragraph20, HardWeight);
+    letter-spacing: -0.2px;
+    text-align: inherit;
+    padding-bottom: 4px;
+  }
+  p {
+    font-family: Clash Grotesk;
+
+    @include makeColorFix(secondary, paragraph16, RegularWeight);
+    line-height: 160%;
+    text-align: inherit;
+    padding-bottom: 8px;
+  }
+}
+
+.cathcCardComp .bottomSide .leftProductInfos {
+  flex-direction: column;
+
+  @include flexItems(space-between, null);
+  height: 100%;
+  .rating {
+    display: flex;
+    align-items: center;
+
+    @include flexItems(null, center);
+    gap: 16px;
+    margin-top: auto;
+    .dotSpaceCard {
+      width: 4px;
+      height: 4px;
+      background-color: #e4e9ee;
+      border-radius: 50%;
+    }
+    .starSide {
+      @include flexItems(null, center);
+      gap: 8px;
+      span {
+        font-family: Clash Grotesk;
+
+        @include makeColorFix(black, paragraph16, RegularWeight);
+        line-height: 160%;
+        transform: translateY(2px);
+      }
+    }
+    .soldCount {
+      @include makeColorFix(black, paragraph16, RegularWeight);
+      font-family: Clash Grotesk;
+
+      line-height: 160%;
+      transform: translateY(2px);
+    }
+  }
+}
+
+.cathcCardComp .bottomSide .rightPrice {
+  h4 {
+    text-align: right;
+
+    font-family: Clash Grotesk;
+
+    @include makeColorFix(primarySecond2, paragraph20, HardWeight);
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.2px;
+  }
+}
+
+.cathcCardComp .wishIcon {
+  position: absolute;
+
+  @include flexItems(center, center);
+  right: 20px;
+  top: 20px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 100%;
+}
+.cathcCardComp .wishIcon:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+// Hover the card
+.cathcCardComp {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform 0.3s ease-out 0s;
+    background: rgba(155, 166, 185, 0.1);
+    content: "";
+    pointer-events: none;
+  }
+
+  &::before {
+    transform-origin: left top;
+  }
+
+  &::after {
+    transform-origin: right bottom;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .cathcCardComp {
+    width: 228px;
+  }
+  .cathcCardComp .topSide {
+    .imgCatch {
+      width: 140px;
+      height: auto;
+    }
+  }
+}
+//1024px
+@media (max-width: 1024px) {
+  .cathcCardComp {
+    width: 198px;
+  }
+  .cathcCardComp .topSide {
+    .imgCatch {
+      width: 120px;
+      height: auto;
+    }
+  }
+  .cathcCardComp .bottomSide .leftProductInfos div:nth-child(1) {
+    h2 {
+      font-size: map-get($fonts, paragraph16);
+    }
+    p {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+
+  .cathcCardComp .bottomSide .leftProductInfos {
+    .rating {
+      @include flexItems(null, center);
+      gap: 8px;
+      margin-top: auto;
+      .starSide {
+        span {
+          font-size: map-get($fonts, paragraph14);
+        }
+      }
+      .soldCount {
+        font-size: map-get($fonts, paragraph14);
+        width: max-content;
+      }
+    }
+  }
+  .cathcCardComp .bottomSide .rightPrice {
+    h4 {
+      font-size: map-get($fonts, paragraph16);
+    }
+  }
+}
+//778px
+@media (max-width: 778px) {
+  .cathcCardComp {
+    width: 170px;
+
+    .wishIcon {
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .cathcCardComp .topSide {
+    .imgCatch {
+      width: 92px;
+      margin: 39px 35px;
+    }
+  }
+
+  .cathcCardComp .bottomSide .leftProductInfos {
+    .rating {
+      gap: 5px;
+    }
+  }
+  .cathcCardComp .wishIcon {
+    right: 12px;
+    top: 12px;
+    padding: 6px;
+  }
+}
+//572px
+@media (max-width: 572px) {
+  .cathcCardComp {
+    width: 155px;
+    .bottomSide {
+      padding-top: 23px;
+      gap: inherit;
+    }
+    .wishIcon {
+      img {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  .cathcCardComp .topSide {
+    .imgCatch {
+      width: 90px;
+      margin: 33px 20px;
+    }
+  }
+  .cathcCardComp .bottomSide .leftProductInfos div:nth-child(1) {
+    h2 {
+      font-size: map-get($fonts, paragraph14);
+    }
+    p {
+      font-size: map-get($fonts, paragraph12);
+    }
+  }
+
+  .cathcCardComp .bottomSide .leftProductInfos {
+    .rating {
+      .starSide {
+        span {
+          font-size: map-get($fonts, paragraph12);
+        }
+      }
+      .soldCount {
+        font-size: map-get($fonts, paragraph12);
+      }
+    }
+  }
+}

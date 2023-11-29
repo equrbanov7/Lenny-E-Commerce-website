@@ -1,0 +1,75 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixin.scss";
+
+.CheckoutAll {
+  .allcheckoutInfosItems {
+    gap: 32px;
+
+    @include flexItems(center, flex-start);
+    .catchLeftItemandAddres {
+      width: 60%;
+      .CatchBuyingItems {
+        width: 100%;
+        top: inherit;
+      }
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .CheckoutAll {
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts,  paragraph20);
+      }
+      p {
+        font-size: map-get($fonts,  paragraph14);
+      }
+    }
+  }
+}
+
+//997px
+@media (max-width: 997px) {
+  .CheckoutAll {
+    .allcheckoutInfosItems {
+     
+      flex-direction: column;
+     
+      padding-inline: 80px;
+      @include flexItems(center, flex-start);
+
+      .catchLeftItemandAddres {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//997px
+@media (max-width: 778px) {
+  .CheckoutAll {
+    .allcheckoutInfosItems {
+      padding-inline: 40px;
+    }
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .CheckoutAll {
+    .allcheckoutInfosItems {
+      padding-inline: 24px;
+    }
+
+    ._catchInfos_1j6zo_1 {
+      h2 {
+        font-size: map-get($fonts,  paragraph18);
+      }
+      p {
+        font-size: map-get($fonts,  paragraph2);
+      }
+    }
+  }
+}

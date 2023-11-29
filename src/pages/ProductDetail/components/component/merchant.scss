@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/variables.scss";
+@import "../../../../assets/styles/mixin.scss";
+
+.MerchantAll {
+  .titleOfSide {
+    @include makeColorFix(black, desktopSize20, HardWeight);
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.2px;
+  }
+  .merchantElmentsMiddle {
+    margin-top: 24px;
+   
+
+    @include flexItems(space-between, center);
+    .btnCatchProduct {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .MerchantAll {
+    .merchantElmentsMiddle {
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+        font-size: map-get($fonts, paragraph16);
+      }
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+       font-size: map-get($fonts, paragraph14);
+      }
+    }
+    .ButtonImgUniverse button {
+     font-size: map-get($fonts, paragraph14);
+    }
+  }
+}
+//772px
+@media (max-width: 772px) {
+  .MerchantAll {
+    .merchantElmentsMiddle {
+      @include maekFlexForColum(24px);
+      align-items: flex-start;
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h4 {
+        font-size: map-get($fonts, paragraph14);
+      }
+      .catchAllThreeElements .rightInfoLogo .rightInfosCatch h3 {
+       font-size: map-get($fonts, paragraph12);
+      }
+      .catchAllThreeElements .rightInfoLogo .bottomInfosMerchant h5 {
+       font-size: map-get($fonts, paragraph12);
+      }
+      .btnCatchProduct{
+        width: 100%;
+        .ButtonImgUniverse{
+          width: 100%;
+        }
+      }
+    }
+
+    .ButtonImgUniverse button {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+}
+
+//384px
+@media (max-width: 400px) {
+  .MerchantAll .ButtonImgUniverse button {
+    width: max-content;
+  }
+}

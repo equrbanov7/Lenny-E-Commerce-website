@@ -1,0 +1,63 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.RelatedProducts {
+  margin-top: 20px;
+  ._titleitem_1nt0c_1 {
+    h1 {
+      
+      font-family: Clash Grotesk;
+    
+      @include makeColorFix(black, paragraph20, HardWeight);
+      line-height: 140%;
+      letter-spacing: -0.2px;
+    }
+    button {
+     
+      text-align: center;
+      font-family: Clash Grotesk;
+     
+
+      @include makeColorFix(primary, paragraph16, HardWeight);
+      line-height: 140%;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  .catchRelatedProductUniversal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .cathcCardComp{
+        margin: auto;
+        margin-top: 37px;
+    }
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  .RelatedProducts{
+
+    .catchRelatedProductUniversal{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+//554px
+@media (max-width: 554px) {
+  .RelatedProducts{
+
+    .catchRelatedProductUniversal{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+//384px
+@media (max-width: 384px) {
+  .RelatedProducts{
+
+    .catchRelatedProductUniversal{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

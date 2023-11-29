@@ -1,0 +1,28 @@
+@import "../assets/styles/mixin.scss";
+@import "../assets/styles/variables.scss";
+
+.ButtonImgUniverse {
+  @include flexItems(null, center);
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid map-get($colors, primary);
+  padding: 14px 24px;
+  cursor: pointer;
+  font-family: "Clash Grotesk", sans-serif;
+  button {
+    text-align: center;
+    font-family: "Clash Grotesk", sans-serif;
+
+    @include makeColorFix(primary, paragraph18, HardWeight);
+    line-height: 140%;
+    letter-spacing: -0.2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .btnCatch {
+    @include flexItems(null, center);
+    gap: 8px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,15 @@
+.btnes{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    button{
+        max-width: 200px;
+        width: 100%;
+    }
+    button:nth-child(1){
+        background: var(--dark-green-01, #1E4C2F);
+        color: #fff;
+    }
+    
+}

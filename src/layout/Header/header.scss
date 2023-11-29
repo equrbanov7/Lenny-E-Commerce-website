@@ -1,0 +1,197 @@
+header {
+  margin: 2rem auto;
+position: relative;
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto 40px;
+    gap: 2rem;
+  }
+  .ovarley{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 2; /* Ensure it's above other content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     opacity: 0;
+     display: none;
+}
+.changeOpacity{
+    opacity: 1;
+    display: inherit;
+}
+}
+
+header {
+  .signUp {
+   
+    width: 100%;
+   
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .titleOSign {
+        color: #0b0f0e;
+        font-family: Clash Grotesk;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: -0.2px;
+      }
+      .formCatch {
+        display: flex;
+        width: 100%;
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          width: 100%;
+          .passwordSide {
+            .troubleAsking {
+              margin-left: auto;
+              color: #1d9e34;
+              text-align: right;
+              font-feature-settings: "clig" off, "liga" off;
+              font-family: Clash Grotesk;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%;
+              cursor: pointer;
+            }
+          }   
+
+          .allInput {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .errorMessageInput{
+              font-size: 12px;
+              color: red;
+            }
+
+            label {
+              color: var(--black-01, #0b0f0e);
+              font-family: Clash Grotesk;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%;
+              letter-spacing: -0.2px;
+            }
+            input {
+              padding: 10px 16px;
+              border-radius: 12px;
+              background: var(--d-grey-02, #f6f8fa);
+              outline: none;
+              border: none;
+              width: 100%;
+              color: var(--grey-01, #818b9c);
+
+              /* Paragraph / P2 / 14 Regular - Lh 160% */
+              font-family: Clash Grotesk;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 22.4px */
+            }
+          }
+          .SubmitButton {
+            input {
+              border-radius: 8px;
+              background: var(--dark-green-01, #1e4c2f);
+
+              padding: 11px 10px;
+              color: var(--white-general, #fff);
+              text-align: center;
+              font-family: Clash Grotesk;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%;
+              letter-spacing: -0.2px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+     
+   
+    
+  }
+
+  .loginSuccedNotification{
+
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    // width: 33%;
+    background-color: #f1f1f1;
+    z-index: 2;
+
+    .innerNotification{
+      padding: 9px 30px;
+    }
+
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+
+  header{
+    .container{
+      margin: auto 30px;
+    }
+    .container .linkLogo{
+      display: none;
+    }
+  }
+
+}
+//554px
+@media (max-width: 554px) {
+
+  header {
+
+    .container{
+      margin: auto 10px;
+      gap: 1rem;
+    }
+  }
+
+  // header .loginSuccedNotification{
+
+  //   .innerNotification{
+  //     padding: 9px 10px;
+
+  //     .imgNotify{
+  //       width: 80px;
+  //       height: 80px;
+  //     }
+  //     .informationUser{
+  //       margin-top: 5px;
+  //       margin-bottom: 12px;
+  //       h2{
+  //         font-size: 18px;
+  //       }
+  //       p{
+  //         font-size: 12px;
+  //       }
+  //     }
+  //   }
+  // }
+
+}

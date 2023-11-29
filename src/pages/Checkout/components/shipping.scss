@@ -1,0 +1,135 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.Shipping {
+  padding: 32px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--d-grey-01, #e4e9ee);
+  background: var(--white-general, #fff);
+  position: relative;
+  top: -32px;
+  .titleSection h1 {
+    @include makeColorFix(black, desktopSize20, HardWeight);
+  }
+
+  .catchAllInfosAddres {
+    @include flexItems(space-between, center);
+
+    .leftMapAddress {
+      @include maekFlexForColum(12px);
+      .mapElementsAddres {
+        gap: 12px;
+
+        margin-top: 24px;
+
+        @include flexItems(null, flex-start);
+        .catchAllThreeElements .leftImgLogo {
+          width: 24px;
+          height: 24px;
+          @include inheritDimensions;
+        }
+        .identifyAddress {
+          border-radius: 4px;
+          background: rgba(29, 158, 52, 0.1);
+          padding: 5px 8px;
+          h3 {
+           @include makeColorFix(primarySecond2, paragraph12, MediumWeight);
+          }
+        }
+      }
+      .addressNameofPerson {
+        margin-left: 39px;
+        h5 {
+          @include makeColorFix(secondary, paragraph16, RegularWeight);
+
+          
+        }
+      }
+    }
+    .rightOtherAddres {
+      .btn {
+       // color: var(--black-01, #0b0f0e);
+        text-align: center;
+        @include makeColorFix(black, paragraph16, HardWeight);
+        border-radius: 8px;
+        border: 1px solid var(--d-grey-01, #e4e9ee);
+        padding: 14px 16px;
+      }
+    }
+  }
+}
+
+//1048px
+@media (max-width: 1048px) {
+  .Shipping {
+    .titleSection h1 {
+      font-size: map-get($fonts,  paragraph20);
+    }
+
+    .catchAllInfosAddres {
+      .leftMapAddress {
+        .mapElementsAddres {
+          .catchAllThreeElements {
+            .rightInfoLogo .rightInfosCatch h4 {
+              font-size: map-get($fonts,  paragraph16);
+            }
+            .rightInfoLogo .rightInfosCatch h3 {
+              font-size: map-get($fonts,  paragraph12);
+            }
+          }
+        }
+        .addressNameofPerson {
+          h5 {
+            font-size: map-get($fonts,  paragraph14);
+          }
+        }
+      }
+      .rightOtherAddres {
+        .btn {
+          font-size: map-get($fonts,  paragraph14);
+        }
+      }
+    }
+  }
+}
+
+//554px
+@media (max-width: 554px) {
+  .Shipping {
+    .titleSection h1 {
+      font-size: map-get($fonts,  paragraph16);
+    }
+
+    .catchAllInfosAddres {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      .leftMapAddress {
+        width: 100%;
+        .mapElementsAddres {
+          width: 100%;
+          .catchAllThreeElements {
+            .rightInfoLogo .rightInfosCatch h4 {
+              font-size: map-get($fonts,  paragraph14);
+            }
+            .rightInfoLogo .rightInfosCatch h3 {
+              font-size: map-get($fonts,  paragraph12);
+            }
+          }
+        }
+        .addressNameofPerson {
+          h5 {
+            font-size: map-get($fonts,  paragraph12);
+          }
+        }
+      }
+      .rightOtherAddres {
+        width: 100%;
+        .btn {
+          font-size: map-get($fonts,  paragraph12);
+          width: 100%;
+        }
+      }
+    }
+  }
+}

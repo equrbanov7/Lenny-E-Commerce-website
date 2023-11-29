@@ -1,0 +1,156 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.ProductInfoRightAll {
+  width: 50%;
+  .topInfoProduct {
+    .nameOfProduct {
+      @include makeColorFix(black, desktopSize38, HardWeight);
+    }
+    .rankingProduct {
+      @include flexItems(null, center);
+      gap: 8px;
+      margin-bottom: 16px;
+      margin-top: 8px;
+      .dotSpace {
+        width: 4px;
+        height: 4px;
+
+        background-color: map-get($colors, GreyDark);
+        border-radius: 50%;
+      }
+      .starSide {
+        @include flexItems(null, center);
+        gap: 8px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        span {
+          @include makeColorFix(black, paragraph16, RegularWeight);
+          transform: translateY(1px);
+        }
+      }
+      .soldCount {
+        @include makeColorFix(black, paragraph16, RegularWeight);
+      }
+    }
+    .productPrice {
+      h4 {
+        @include makeColorFix(primarySecond2, desktopSize28, HardWeight);
+      }
+    }
+  }
+
+  .middleDescription {
+    margin-top: 24px;
+    p {
+      @include makeColorFix(secondary, paragraph16, RegularWeight);
+      line-height: 160%;
+    }
+  }
+  .lineBreak {
+    height: 1px;
+    width: 100%;
+    background: map-get($colors, GreyDark);
+    margin: 24px auto;
+  }
+  .catchAllSelections {
+    margin-bottom: 52px;
+    .titleOfSide {
+      @include makeColorFix(black, paragraph18, HardWeight);
+    }
+
+    .catchSlections {
+      @include flexItems(null, center);
+      gap: 16px;
+      margin-top: 12px;
+    }
+  }
+
+  .btnesOfProduct {
+    @include flexItems(null, center);
+    gap: 16px;
+    width: 100%;
+
+    .ButtonImgUniverse {
+      width: 100%;
+      button {
+        margin: auto;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .btnesOfProduct .ButtonImgUniverse:nth-child(1) {
+    border-radius: 8px;
+    background: map-get($colors, primary);
+    button {
+      color: #fff;
+    }
+  }
+}
+
+//1200px
+@media (max-width: 1200px) {
+  .ProductInfoRightAll {
+    .topInfoProduct {
+      .nameOfProduct {
+        font-size: 24px;
+      }
+      .rankingProduct {
+        .starSide {
+          span {
+            font-size: 14px;
+          }
+        }
+        .soldCount {
+          font-size: 14px;
+        }
+      }
+      .productPrice {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .middleDescription {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .catchAllSelections {
+      margin-bottom: 32px;
+    }
+
+    .btnesOfProduct {
+      .ButtonImgUniverse {
+        .btnCatch {
+          gap: 3px;
+        }
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+//1048px
+@media (max-width: 1048px) {
+  .ProductInfoRightAll {
+    width: 100%;
+
+    .btnesOfProduct {
+      flex-direction: column;
+      .ButtonImgUniverse {
+        .btnCatch {
+          gap: 8px;
+        }
+      }
+    }
+  }
+}

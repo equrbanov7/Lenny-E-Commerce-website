@@ -1,0 +1,112 @@
+@import "../../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../../assets/styles/variables.scss";
+
+.ReviewsRightItems {
+  width: 100%;
+  .titleReviewList {
+    @include makeColorFix(black, desktopSize20, HardWeight);
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.2px;
+  }
+  .forResponsiveDivCatch {
+    margin-top: 16px;
+    .filterIconSide {
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);
+
+      width: 44px;
+      height: 44px;
+
+      @include flexItems(center, center);
+      display: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px;
+      }
+    }
+  }
+  .btnesReview {
+    display: flex;
+    gap: 12px;
+
+    button {
+      @include makeColorFix(black, paragraph14, MediumWeight);
+      line-height: 160%;
+      border-radius: 8px;
+      border: 1px solid map-get($colors, GreyDark);
+      padding: 11px 16px;
+      cursor: pointer;
+    }
+    .buttonActive {
+      color: map-get($colors, primarySecond2);
+      background-color: #fff;
+      border: 1px solid map-get($colors, primarySecond2);
+    }
+  }
+  .ResultReview {
+    margin-top: 32px;
+    width: 100%;
+    @include maekFlexForColum(32px);
+
+    .lineBlockBridge {
+      width: 100%;
+      height: 1px;
+      background: map-get($colors, GreyDark);
+    }
+  }
+  .paginationCatch {
+    margin-top: 52px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include flexItems(center, null);
+    .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+      text-align: center;
+
+      @include makeColorFix(primarySecond2, paragraph14, MediumWeight);
+      line-height: 160%; /* 22.4px */
+    }
+    .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon {
+      color: map-get($colors, primarySecond2);
+    }
+    .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+     
+      text-align: center;
+
+
+      @include makeColorFix(secondary, paragraph14, MediumWeight);
+      line-height: 160%; /* 22.4px */
+      padding: 16px 18px !important;
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .ReviewsRightItems {
+    .forResponsiveDivCatch {
+    
+      @include flexItems(flex-start, space-between);
+      .filterIconSide {
+        display: flex;
+        cursor: pointer;
+      }
+      .btnesReview {
+        flex-wrap: wrap;
+        width: 300px;
+        button {
+          font-size: map-get($fonts, paragraph12);
+        }
+      }
+    }
+  }
+}
+
+//778px
+@media (max-width: 778px) {
+  .ResultReview {
+    gap: 24px;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../../assets/styles/variables.scss";
+
+.EachLineSysRequred {
+  .sysItem {
+    
+    @include makeColorFix(secondary, paragraph16, RegularWeight);
+    line-height: 160%; /* 25.6px */
+  }
+}
+
+//994px
+@media (max-width: 994px) {
+  .EachLineSysRequred {
+    .sysItem {
+      font-size: map-get($fonts, paragraph14);
+    }
+  }
+}

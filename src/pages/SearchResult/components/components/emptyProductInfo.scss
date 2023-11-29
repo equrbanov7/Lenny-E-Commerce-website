@@ -1,0 +1,13 @@
+@import "../../../../assets/styles/mixin.scss";
+
+
+.EmptyProductInfo{
+    @include flexItems(center, center);
+    margin-block: 32px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--d-grey-01, #E4E9EE);
+    background: var(--white-general, #FFF);
+    padding: 32px 24px;
+    text-align: center;
+}

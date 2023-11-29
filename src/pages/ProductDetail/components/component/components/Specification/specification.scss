@@ -1,0 +1,57 @@
+@import "../../../../../../assets/styles/mixin.scss";
+@import "../../../../../../assets/styles/variables.scss";
+
+.Specification {
+  width: 100%;
+  max-width: 410px;
+  min-width: 191px;
+
+  .spesficTitleTop {
+    @include makeColorFix(black, paragraph18, HardWeight);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.2px;
+  }
+}
+.specificationTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+}
+.eachLineTable {
+  .spesficTitle {
+    @include makeColorFix(secondary, paragraph16, RegularWeight);
+    line-height: 160%; /* 25.6px */
+  }
+  .resultTd {
+  
+    @include makeColorFix(black, paragraph16, MediumWeight);
+    line-height: 160%; /* 25.6px */
+  }
+}
+
+td,
+th {
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background: map-get($colors, GreyLight2);
+}
+
+//994px
+@media (max-width: 994px) {
+  .Specification {
+    .spesficTitleTop {
+      font-size: map-get($fonts, paragraph16);
+    }
+  }
+  .eachLineTable {
+    .spesficTitle {
+       font-size: map-get($fonts, paragraph14);
+    }
+    .resultTd {
+       font-size: map-get($fonts, paragraph14);
+    }
+  }
+}
